@@ -12,9 +12,6 @@ class Plateau {
             const newNavigation = new Navigate(firstPoint[2], firstPoint[0], firstPoint[1], topRight[0], topRight[1]);
             for (let i = 0; i < comands.length; i++) {
                 let _c = comands[i];
-                /* if (typeof _c !== 'number') {
-                    _c = Number(_c);
-                } */
                 newNavigation._storageMoves(_c);
                 if (_c === COMMAND.LEFT) {
                     newNavigation._updateorientation(_c, i);
@@ -28,7 +25,7 @@ class Plateau {
                 }
                 newNavigation._storagePoints();
                 const points = newNavigation._getCoorPoints();
-                console.log( points);
+                console.log('points: ', points);
             }
             console.log('output: ',newNavigation._buildOutput());
             return newNavigation._buildOutput();

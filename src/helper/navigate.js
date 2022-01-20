@@ -12,8 +12,6 @@ class Navigate {
         this.mNextCardinalDir = key;
         this.currentOrientation = null;
         this.nextOrientation = null;
-        /* this.leftDir = leftDir;
-        this.rightDir = rightDir; */
         this.x = x;
         this.y = y;
         this.initialize();
@@ -59,9 +57,6 @@ class Navigate {
             if (!this.verifyXOnPlateau()) {
                 const text = `Point - X axis is Out ${this._buildOutput()}`;
                 throw new Error(text);
-            }
-            else {
-                console.log('not exist direction');
             }
         } catch (error) {
             throw new Error(text);

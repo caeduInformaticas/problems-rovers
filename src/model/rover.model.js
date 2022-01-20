@@ -1,6 +1,3 @@
-const Navigate = require("../helper/navigate");
-const PLATEAU = require("../helper/plateau");
-const { COMMAND } = require("../const");
 const Plateau = require("../helper/plateau");
 
 class Rovers {
