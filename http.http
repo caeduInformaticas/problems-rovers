@@ -5,7 +5,7 @@
 @contentType = application/json
 
 
-### ROVERS
+### ROVERS moves1
 POST http://{{host}}/{{api}}solve/rovers HTTP/1.1
 content-type: {{contentType}}
 
@@ -15,7 +15,7 @@ content-type: {{contentType}}
     "firstPoint": "1 2 N",
     "movesr1": "LMLMLMLMM"
 }
-### ROVERS
+### ROVERS moves2
 POST http://{{host}}/{{api}}solve/rovers HTTP/1.1
 content-type: {{contentType}}
 
