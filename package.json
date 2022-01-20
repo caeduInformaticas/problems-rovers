@@ -1,0 +1,28 @@
+{
+  "name": "problems-rovers",
+  "version": "1.0.0",
+  "description": "BolivianDevs rovers solution",
+  "main": "index.js",
+  "scripts": {
+    "rovers": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caeduInformaticas/problems-rovers.git"
+  },
+  "keywords": [
+    "rovers"
+  ],
+  "author": "carlos eduardo avalos justiniano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caeduInformaticas/problems-rovers/issues"
+  },
+  "homepage": "https://github.com/caeduInformaticas/problems-rovers#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "helmet": "^5.0.1"
+  }
+}

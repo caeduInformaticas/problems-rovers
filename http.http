@@ -1,0 +1,20 @@
+@hostname = localhost
+@port = 2222
+@host = {{hostname}}:{{port}}
+@api = api/v1/
+@contentType = application/json
+
+### TEST 
+GET http://{{host}}/test HTTP/1.1
+
+### ROVERS
+POST http://{{host}}/{{api}}solve/rovers HTTP/1.1
+content-type: {{contentType}}
+
+
+{
+    "topRight": "5 5",
+    "firstPoint": "1 2 N",
+    "movesr1": "LMLMLMLMM",
+    "movesr2": "MMRMMRMRRM"
+}
