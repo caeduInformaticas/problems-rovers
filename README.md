@@ -42,9 +42,21 @@ MMRMMRMRRM
 Expected Output:
 1 3 N
 5 1 E
+
 ==========
 
-install REST CLIENT VS code extension.
+
+==========
+IMPORTANT
+install REST CLIENT VS code extension for test api.
+==========
 RUN COMMAND:
 npm run rovers
-test on http.http
+
+==============
+click test apis on http.http file:
+### ROVERS moves2
+send request <==(______click here_____)
+POST http://{{host}}/{{api}}solve/rovers HTTP/1.1
+........
+==============
