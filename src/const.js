@@ -19,12 +19,18 @@ const splitBySpace = (data) => {
 const stringToArray = (param) => {
     return Array.from(param);
 };
+const parceToNumber = (data) => {
+    let res = data;
+    if (typeof data !== 'number') {
+        res = Number(data);
+    }
+    return res;
+}
 const VALID = {
     _topRight(data) {
         let res = false;
         if (isString(data)) {
             const coor = splitBySpace(data);
-            console.log(coor);
             if (coor.length >= 1 && naturalNumer(coor[0]) && naturalNumer(coor[1])) {
                 res = true;
             }
@@ -35,7 +41,6 @@ const VALID = {
         let res = false;
         if (isString(data)) {
             const coor = splitBySpace(data);
-            console.log(coor);
             if (coor.length >= 2 && naturalNumer(coor[0]) && naturalNumer(coor[1]) && isString(coor[1])) {
                 res = true;
             }
@@ -76,5 +81,6 @@ module.exports = Object.freeze({
     COMMAND,
     VALID,
     splitBySpace,
-    stringToArray
+    stringToArray,
+    parceToNumber
 });

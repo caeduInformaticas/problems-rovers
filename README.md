@@ -43,3 +43,8 @@ Expected Output:
 1 3 N
 5 1 E
 ==========
+
+install REST CLIENT VS code extension.
+RUN COMMAND:
+npm run rovers
+test on http.http

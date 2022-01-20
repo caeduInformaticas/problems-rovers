@@ -8,7 +8,6 @@ mRover.set(KEY.ROVERS, [Request.rovers, Rover.getRoute]);
 exports.solveRovers = async (req, res) => {
     try {
         const { success, bodyParced } = mRover.get(KEY.ROVERS)[0](req.body);
-        console.log(success, bodyParced);
         if (success) {
             const output = mRover.get(KEY.ROVERS)[1](bodyParced);
             let response = {

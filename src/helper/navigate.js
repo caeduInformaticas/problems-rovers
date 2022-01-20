@@ -19,10 +19,10 @@ class Navigate {
         this.initialize();
     }
     verifyXOnPlateau() {
-        return this.x < this.mPointTopRight[0];
+        return this.x < this.mPointTopRight[0]+1;
     }
     verifyYOnPlateau() {
-        return this.y < this.mPointTopRight[1];
+        return this.y < this.mPointTopRight[1]+1;
     }
     lessXaxis = () => {
         this.x -= 1;
@@ -46,7 +46,6 @@ class Navigate {
     _move() {
         try {
             if (this.mCurrentCardinalDir === this.mNextCardinalDir) {
-                console.log('=====> forward', this.mNextCardinalDir);
                 this.mMove.get(this.mCurrentCardinalDir)[4]();
             } else if (this.currentOrientation === COMMAND.LEFT) {
                 this.mMove.get(this.mCurrentCardinalDir)[0]();
@@ -65,25 +64,19 @@ class Navigate {
                 console.log('not exist direction');
             }
         } catch (error) {
-            console.log(error);
             throw new Error(text);
         }
     }
     _updateorientation(cmd, i) {
-        console.log('update cmd: ',cmd, ' i: ',i,this.mStorageMoves);
         if (i >= 1) {
-            console.log(this.mStorageMoves[i]);
             if (this.mStorageMoves[i] === this.mStorageMoves[i-1]) {
-                console.log('<><><><> Equals directions <><>');
                 this._updatemCurrentCardinalDir();
             }
         }
         this.currentOrientation = cmd;
         if (cmd === COMMAND.LEFT) {
-            console.log(':::::::::LEFT:', cmd);
             this.mNextCardinalDir = this.mMove.get(this.mCurrentCardinalDir)[2];
         } else {
-            console.log(':::::::::RIGHT:', cmd);
             this.mNextCardinalDir = this.mMove.get(this.mCurrentCardinalDir)[3];
         }
     }
@@ -98,7 +91,6 @@ class Navigate {
     }
     _storageMoves(move) {
         this.mStorageMoves.push(move);
-        console.log('__PUSH__',this.mStorageMoves);
     }
     _getCurrentCardinalPoint() {
         return this.mCurrentCardinalDir;
